@@ -7,6 +7,7 @@ Thành viên:
 * [ ] **1412485** Lê Duy Tân
 
 URL: **localhost:3000/**
+Run: `docker-compose up` to serve rails
 
 ## Yêu cầu
 

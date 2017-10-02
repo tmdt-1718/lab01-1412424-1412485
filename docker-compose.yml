@@ -1,0 +1,18 @@
+version: "3.3"
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/web
+    # command: bundle exec "bundle install && rails serve -b 0.0.0.0"
+    entrypoint: sh /web/startup.sh
+    links:
+      - db
+    # command: rails new . --database=postgresql
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: 123
+      POSTGRES_USER: web
