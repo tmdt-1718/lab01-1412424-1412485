@@ -33,12 +33,15 @@
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
+        <button class="navbar-toggler collapsed" type="button" onclick="showNav()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
     </nav>
 
     <div class="container content">
       <div class="row">
-        <div class="col-md-3 d-none d-md-block">
+        <div id="navLeftBar" class="col-md-3 d-none d-md-block">
           <div class="list-group">
             <a href="#" class="list-group-item active">Me</a>
             <a href="#" class="list-group-item">Bryan</a>
@@ -58,5 +61,10 @@
       <span class="text-muted">Place sticky footer content here.</span>
     </div>
   </footer>
+  <script>
+    function showNav() {
+        document.getElementById("navLeftBar").classList.remove("d-none");
+    }
+  </script>
   </body>
 </html>
